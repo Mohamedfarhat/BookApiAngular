@@ -1,0 +1,23 @@
+<form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+    <input type="hidden" [(ngModel)]="ser.book.id" name="id">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" [(ngModel)]="ser.book.title" class="form-control" name="title" placeholder="Enter Title">
+    </div>
+    <div class="form-group">
+        <label for="author">Author</label>
+        <input type="text" [(ngModel)]="ser.book.author" class="form-control" name="author" placeholder="Enter Author">
+    </div>
+    <div class="form-group">
+        <label for="numberOfPages">Number Of Pages</label>
+        <input type="text" [(ngModel)]="ser.book.numberOfPages" class="form-control" name="numberOfPages"
+            placeholder="Enter Number Of Pages">
+    </div>
+    <div class="form-group">
+        <label for="publishedAt">Published At</label>
+        <input type="date" [(ngModel)]="ser.book.publishedAt" class="form-control" name="publishedAt"
+            placeholder="Enter Published At">
+    </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-primary ml-2" (click)="restForm(myform)">Clear All For Add New</button>
+</form>
